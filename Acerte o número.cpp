@@ -9,7 +9,8 @@ int tryNum = 0;
 
 void setup(){
 	srand(time(NULL));
-	ramdomNum = rand()%100;	
+	ramdomNum = rand()%100;
+	printf("%d", ramdomNum);
 }
 
 void input(){
@@ -19,7 +20,7 @@ void input(){
 }
 
 void ifs(){
-	
+
 	int a = 0;
 	while(tryNum != ramdomNum){
 		input();
@@ -43,33 +44,33 @@ void ifs(){
 
 
 void draw(){
-	
+
 		for(int a = 0; a < 45; ++a){
 			printf("#");
 		}
 		printf("\n");
 
-		
+
 		for(int b = 0; b <= 44; ++b){
 			if(b == 0 || b == 44){
 				printf("#");
 			}else{
 				printf(" ");
 			}
-		}	
+		}
 		printf("\n");
-		
+
 		ifs();
-		
+
 		for(int c = 0; c <= 44; ++c){
 			if(c == 0 || c == 44){
 				printf("#");
 			}else{
 				printf(" ");
 			}
-		}	
+		}
 		printf("\n");
-	
+
 		for(int a = 0; a < 45; ++a){
 			printf("#");
 		}
@@ -78,15 +79,15 @@ void draw(){
 
 
 int main(){
-	
+
 	setlocale(LC_ALL, "Portuguese");
-	
+
 	setup();
 	draw();
 
-	
+
 	printf("\n\nNúmero correto !\n\n\n");
 	return 3;
-			
+
 }
 
